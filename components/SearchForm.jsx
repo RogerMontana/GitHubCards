@@ -1,25 +1,26 @@
 import React from 'react';
+import ReactDOM from 'react-dom';
 
 export default class SearchForm extends React.Component{
     constructor(props) {
         super(props);
-        this.state = {
-        };
+        this.handleSubmit = this.handleSubmit.bind(this);
     }
 
     handleSubmit(e) {
-        e.defaultPrevented();
-        let loginInput = React.findDOMNode(this.refs.login);
+        e.preventDefault();
+        let loginInput = ReactDOM.findDOMNode(this.refs.login);
         console.log(loginInput);
         this.props.addCard(loginInput.value);
         loginInput.value = '';
     }
 
     render() {
-        return <form onsubmit={this.handleSubmit}>
+        return <form onSubmit={this.handleSubmit}>
             <input placeholder="GitHub login" ref="login"/>
             <button>GO</button>
         </form>;
     }
 }
+
 

@@ -7,22 +7,23 @@ import SearchForm from './SearchForm.jsx'
 export default class ContainerDiv extends React.Component{
     constructor(props) {
         super(props);
+        this.addCard = this.addCard.bind(this);
         this.state = {
-            logins: ["RogerMontana", "lol", "dummyUserName100Precent"]
+            logins: []
         };
     }
 
     addCard(login) {
-        console.log(login);
-        this.setState({logins: this.state.logins.concat(login)});
+        let component = this;
+        this.setState({logins: component.state.logins.concat(login)});
     }
 
     render() {
         let cards = this.state.logins.map(function (login) {
-            return <Card login={login} />
+            return <Card key={login} login={login} />
         });
         return <div>
-            <p>HELLO THERE</p>
+            <h3>Search by github name</h3>
             <SearchForm addCard={this.addCard}/>
             {cards}
         </div>;
