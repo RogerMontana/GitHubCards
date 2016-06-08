@@ -12,8 +12,12 @@ export default class Card extends React.Component{
 
     componentDidMount() {
         let component = this;
-        $.get("http://api.github.com/users/" + this.props.login, function(data){
-            component.setState(data);
+        $.ajax({
+            url: 'http://api.github.com/users/' + this.props.login,
+            dataType: 'json',
+            success: function(data){
+                component.setState(data);
+            }
         });
     }
 
