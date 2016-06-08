@@ -11,7 +11,7 @@
   "dependencies": {
     "react": "^15.1.0",
     "react-dom": "^15.1.0",
-    "jquery": "~1.9.1"
+    "jquery": "^1.9.1"
   },
   "devDependencies": {
     "babel-core": "^6.4.5",

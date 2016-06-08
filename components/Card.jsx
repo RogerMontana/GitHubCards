@@ -1,5 +1,5 @@
 import React from 'react';
-import $ from "jquery";
+import $ from 'jquery';
 
 export default class Card extends React.Component{
     constructor(props) {
