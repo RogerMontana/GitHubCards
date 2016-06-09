@@ -17,8 +17,14 @@ export default class SearchForm extends React.Component{
 
     render() {
         return <form onSubmit={this.handleSubmit}>
-            <input placeholder="GitHub login" ref="login"/>
-            <button>GO</button>
+            <div className="row">
+                <div className="small-10 columns">
+                        <input type="text" placeholder="GitHub login" ref="login"/>
+                </div>
+                <div className="small-2 columns">
+                    <button className="hollow button" >SEARCH</button>
+                </div>
+            </div>
         </form>;
     }
 }

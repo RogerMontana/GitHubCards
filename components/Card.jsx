@@ -22,10 +22,9 @@ export default class Card extends React.Component{
     }
 
     render() {
-        return <div>
+        return <div className="panel callout radius">
             <img src={this.state.avatar_url} width="80"/>
             <h3>{this.state.name}</h3>
-            <hr/>
         </div>;
     }
 }

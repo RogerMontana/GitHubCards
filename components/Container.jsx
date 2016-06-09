@@ -22,10 +22,12 @@ export default class ContainerDiv extends React.Component{
         let cards = this.state.logins.map(function (login) {
             return <Card key={login} login={login} />
         });
-        return <div>
+        return <div className="row">
             <h3>Search by github name</h3>
             <SearchForm addCard={this.addCard}/>
-            {cards}
+            <div>
+                {cards}
+            </div>
         </div>;
     }
 }
