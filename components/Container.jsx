@@ -19,8 +19,9 @@ export default class ContainerDiv extends React.Component{
     }
 
     render() {
+        let cardId = 1;
         let cards = this.state.logins.map(function (login) {
-            return <Card key={login} login={login} />
+            return <Card id = {cardId++} login={login} />
         });
         return <div className="row">
             <h3>Search by github name</h3>

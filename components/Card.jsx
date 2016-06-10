@@ -13,7 +13,7 @@ export default class Card extends React.Component{
     componentDidMount() {
         let component = this;
         $.ajax({
-            url: 'http://api.github.com/users/' + this.props.login,
+            url: 'https://api.github.com/users/' + this.props.login,
             dataType: 'json',
             success: function(data){
                 component.setState(data);
